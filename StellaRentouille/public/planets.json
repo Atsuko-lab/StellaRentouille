@@ -1,0 +1,100 @@
+{
+  "planets": [
+    {
+        "id": 1,
+        "nom": "Mercure",
+        "taille_km": 4879,
+        "climat": "Extrême (très chaud le jour, très froid la nuit)",
+        "composition_atmosphere": ["Traces d'oxygène", "Sodium", "Hydrogène"],
+        "duree_annee_jours": 88,
+        "distance_soleil_millions_km": 57.9,
+        "prix": "100 000₿/an",
+        "state": "Disponible",
+        "img": "img/mercure.jpg"
+    },
+    {
+      "id": 2,
+      "nom": "Vénus",
+      "taille_km": 12104,
+      "climat": "Effet de serre incontrôlé, chaleur constante",
+      "composition_atmosphere": ["Dioxyde de carbone (96%)", "Azote (3.5%)", "Acide sulfurique"],
+      "duree_annee_jours": 224.7,
+      "distance_soleil_millions_km": 108.2,
+        "prix": "150 000₿/an",
+        "state": "Disponible",
+      "img": "img/venus.jpg"
+    },
+    {
+      "id": 3,
+      "nom": "Terre",
+      "taille_km": 12756,
+      "climat": "Tempéré et varié",
+      "composition_atmosphere": ["Azote (78%)", "Oxygène (21%)", "Argon (0.9%)"],
+      "duree_annee_jours": 365.25,
+      "distance_soleil_millions_km": 149.6,
+        "prix": "200 000 000₿/an",
+        "state": "Disponible",
+        "img": "img/terre.jpg"
+    },
+    {
+      "id": 4,
+      "nom": "Mars",
+      "taille_km": 6792,
+      "climat": "Froid et désertique",
+      "composition_atmosphere": ["Dioxyde de carbone (95%)", "Azote", "Argon"],
+      "duree_annee_jours": 687,
+      "distance_soleil_millions_km": 227.9,
+        "prix": "1 000 000₿/an",
+        "state": "Disponible",
+      "img": "img/mars.jpg"
+    },
+    {
+      "id": 5,
+      "nom": "Jupiter",
+      "taille_km": 142984,
+      "climat": "Tempêtes permanentes, froid en surface",
+      "composition_atmosphere": ["Hydrogène (90%)", "Hélium (10%)"],
+      "duree_annee_jours": 4331,
+      "distance_soleil_millions_km": 778.6,
+        "prix": "500 000₿/an",
+        "state": "Disponible",
+      "img": "img/jupiter.jpg"
+    },
+    {
+      "id": 6,
+      "nom": "Saturne",
+      "taille_km": 120536,
+      "climat": "Venteux et froid",
+      "composition_atmosphere": ["Hydrogène (96%)", "Hélium (3%)"],
+      "duree_annee_jours": 10747,
+      "distance_soleil_millions_km": 1433.5,
+      "prix": "800 000₿/an",
+      "state": "Disponible",
+      "img": "img/saturne.jpg"
+    },
+    {
+      "id": 7,
+      "nom": "Uranus",
+      "taille_km": 51118,
+      "climat": "Glacial, atmosphère très calme",
+      "composition_atmosphere": ["Hydrogène (83%)", "Hélium (15%)", "Méthane (2%)"],
+      "duree_annee_jours": 30589,
+      "distance_soleil_millions_km": 2872.5,
+        "prix": "500 000₿/an",
+        "state": "Disponible",
+        "img": "img/uranus.png"
+    },
+    {
+      "id": 8,
+      "nom": "Neptune",
+      "taille_km": 49528,
+      "climat": "Vents supersoniques, froid extrême",
+      "composition_atmosphere": ["Hydrogène (80%)", "Hélium (19%)", "Méthane (1%)"],
+      "duree_annee_jours": 59800,
+      "distance_soleil_millions_km": 4495.1,
+        "prix": "10₿/an",
+        "state": "Disponible",
+      "img": "img/neptune.jpg"
+    }
+  ]
+}
