@@ -1,0 +1,53 @@
+/* Fond de l'espace profond */
+.page-wrapper {
+  min-height: 100vh;
+  background-color: #0b0d17;
+  /* Effet de petites étoiles avec des gradients */
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 100px 150px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 200px 50px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 250px, #fff, rgba(0,0,0,0));
+  background-size: 300px 300px; /* Répète le motif d'étoiles */
+  color: white;
+  padding: 40px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+/* Le conteneur Flexbox qui aligne Texte et Image */
+.container {
+  display: flex;
+  align-items: center; /* Centre verticalement le texte par rapport à l'image */
+  max-width: 900px;
+  margin: 0 auto 30px auto; /* Centre le bloc sur la page */
+  background: rgba(255, 255, 255, 0.05); /* Fond légèrement gris transparent */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* L'alternance magique : une ligne sur deux est inversée */
+/* On utilise :nth-of-type(even) car h1 compte comme le premier enfant */
+.container:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 3; /* Le texte prend plus de place (le long rectangle du dessin) */
+  padding: 40px;
+  font-size: 1.2rem;
+}
+
+.image {
+  flex: 1; /* L'image prend moins de place (le petit carré du dessin) */
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /* Évite que l'image soit écrasée */
+  background-color: #1a1a1a; /* Fond si l'image ne charge pas */
+}
