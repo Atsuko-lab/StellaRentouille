@@ -24,8 +24,10 @@ h1 {
 .container {
   display: flex;
   align-items: center; /* Centre verticalement le texte par rapport à l'image */
+  margin: 0 auto; /* Centre horizontalement le conteneur */
   max-width: 900px;
-  margin: 0 auto 30px auto; /* Centre le bloc sur la page */
+  margin-bottom: 70px;
+  margin-top: 70px;
   background: rgba(255, 255, 255, 0.05); /* Fond légèrement gris transparent */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
