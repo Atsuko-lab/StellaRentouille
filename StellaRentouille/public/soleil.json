@@ -1,0 +1,49 @@
+{
+  "soleils": [
+    {
+      "id": 1,
+      "nom": "Soleil",
+      "taille_rayon_km": 696340,
+      "chaleur_surface_celsius": 5500,
+        "prix": "1 000 000 000₿/an",
+        "state": "Disponible",
+        "img": "img/soleil.jpg"
+    },
+    {
+      "id": 2,
+      "nom": "Sirius A",
+      "taille_rayon_km": 1190000,
+      "chaleur_surface_celsius": 9660,
+        "prix": "1 000 000 000₿/an",
+        "state": "Disponible",
+        "img": "img/sirius.jpg"
+    },
+    {
+      "id": 3,
+      "nom": "Bételgeuse",
+      "taille_rayon_km": 617265000,
+      "chaleur_surface_celsius": 3200,
+        "prix": "1 000 000 000₿/an",
+        "state": "Disponible",
+        "img": "img/betelgeuse.jpg"
+    },
+    {
+      "id": 4,
+      "nom": "Proxima Centauri",
+      "taille_rayon_km": 107280,
+      "chaleur_surface_celsius": 2700,
+        "prix": "1 000 000 000₿/an",
+        "state": "Disponible",
+        "img": "img/proxima.jpg"
+    },
+    {
+      "id": 5,
+      "nom": "Rigel",
+      "taille_rayon_km": 54250000,
+      "chaleur_surface_celsius": 11800,
+        "prix": "1 000 000 000₿/an",
+        "state": "Disponible",
+        "img": "img/rigel.jpg"
+    }
+  ]
+}

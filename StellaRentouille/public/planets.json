@@ -45,7 +45,7 @@
       "duree_annee_jours": 687,
       "distance_soleil_millions_km": 227.9,
         "prix": "1 000 000₿/an",
-        "state": "Disponible",
+        "state": "Indisponible",
       "img": "img/mars.jpg"
     },
     {
