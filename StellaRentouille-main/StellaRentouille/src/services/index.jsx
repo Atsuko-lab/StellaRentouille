@@ -15,7 +15,7 @@ export const getAsteroids = async () => {
 }
 
 export const getSoleil = async () => {
-    const response = await fetch('/soleil.json');
+    const response = await fetch('/soleils.json');
     const data = await response.json();
     return data.soleils;
 }

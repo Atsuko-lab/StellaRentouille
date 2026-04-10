@@ -40,9 +40,15 @@ const ModalInfo = ({ stellarObject, isVisible, onClose }) => {
           {stellarObject.type && (
             <p><strong>Type :</strong> {stellarObject.type}</p>
           )}
+          {stellarObject.taille_rayon_km && (
+            <p><strong>Rayon :</strong> {stellarObject.taille_rayon_km} km</p>
+          )}
+          {stellarObject.chaleur_surface_celsius && (
+            <p><strong>Chaleur de surface :</strong> {stellarObject.chaleur_surface_celsius} °C</p>
+          )}
         </div>
 
-        {stellarObject.state === 'Disponible' && (
+        {stellarObject.state &&(
           <button className="modal-rent-btn">Louer cet astre</button>
         )}
       </div>

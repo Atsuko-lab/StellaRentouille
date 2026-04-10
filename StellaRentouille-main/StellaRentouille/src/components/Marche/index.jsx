@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './index.css';
 import { getPlanets, getAsteroids, getSoleil } from '../../services';
 import ModalInfo from '../ModalInfo';
@@ -58,6 +59,14 @@ const Marche = () => {
             <div className="marche">
             <h1>Marché</h1>
             <p>Découvrez toutes nos offres</p>
+            <div className="dropdown-container">
+                <select className="visual-dropdown">
+                    <option>Tout afficher</option>
+                    <option>Planète</option>
+                    <option>Astéroïde</option>
+                    <option>Soleil</option>
+                </select>
+            </div>
             <div className="planets-grid">
                 {planets.map((planet) => (
                     <div key={planet.id} className="planet-card" onClick={() => selectItemHandler('planet', planet.id)}>
@@ -72,16 +81,18 @@ const Marche = () => {
                     </div>
                 ))}
                 {asteroids.map((asteroid) => (
-                    <div key={asteroid.id} className="planet-card" onClick={() => selectItemHandler('asteroid', asteroid.id)}>
-                        <img
-                            src={asteroid.img}
-                            alt={asteroid.nom}
-                            className="planet-image"
-                        />
-                        <h2 className="planet-name">{asteroid.nom}</h2>
-                        <h3 className='planet-price'>{asteroid.prix}</h3>
-                        <h3 className="planet-state">{asteroid.state}</h3>
-                    </div>
+                    <Link to="/">
+                        <div key={asteroid.id} className="planet-card">
+                            <img
+                                src={asteroid.img}
+                                alt={asteroid.nom}
+                                className="planet-image"
+                            />
+                            <h2 className="planet-name">{asteroid.nom}</h2>
+                            <h3 className='planet-price'>{asteroid.prix}</h3>
+                            <h3 className="planet-state">{asteroid.state}</h3>
+                        </div>
+                    </Link>
                 ))}
                 {soleils.map((soleil) => (
                     <div key={soleil.id} className="planet-card" onClick={() => selectItemHandler('soleil', soleil.id)}>
