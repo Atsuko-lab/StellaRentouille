@@ -4,7 +4,7 @@ import './index.css';
 const NousContacter = () => {
   const [submitted, setSubmitted] = useState(false);
 
-  // 🏃 Bug 1 : bouton qui fuit
+  
   const [btnPos, setBtnPos] = useState({ x: null, y: null });
   const btnRef = useRef(null);
   const formRef = useRef(null);
@@ -22,12 +22,11 @@ const NousContacter = () => {
     });
   };
 
-  // 💣 Bug 2 : backspace efface tout le champ
+
   const handleNuclearBackspace = (e) => {
     if (e.key === 'Backspace') {
       e.preventDefault();
-      e.target.value = '';
-      // Pour les inputs React controllés, on force via nativeInputValueSetter
+      e.target.value = ''
       const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
         window.HTMLTextAreaElement.prototype, 'value'
       )?.set || Object.getOwnPropertyDescriptor(
@@ -40,7 +39,7 @@ const NousContacter = () => {
     }
   };
 
-  // 🌀 Bug 3 : espace = rotation de la page
+
   const [rotation, setRotation] = useState(0);
   const handleSpaceRotate = (e) => {
     if (e.key === ' ') {
@@ -132,7 +131,7 @@ const NousContacter = () => {
               />
             </div>
 
-            {/* 🏃 Bug 1 : bouton qui fuit */}
+        
             <button
               type="submit"
               className="btn-submit"
