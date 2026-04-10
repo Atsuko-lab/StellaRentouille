@@ -235,9 +235,6 @@ Les données sont stockées en fichiers JSON statiques dans `/public/` et récup
 | Commande | Description |
 |----------|-------------|
 | `npm run dev` | Lance le serveur de développement Vite avec HMR |
-| `npm run build` | Génère le build de production |
-| `npm run preview` | Prévisualise le build de production |
-| `npm run lint` | Lance ESLint sur le projet |
 
 ---
 
