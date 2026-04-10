@@ -44,7 +44,7 @@ const NousContacter = () => {
   const [rotation, setRotation] = useState(0);
   const handleSpaceRotate = (e) => {
     if (e.key === ' ') {
-      setRotation(prev => prev + 180);
+      setRotation(prev => prev + 73);
     }
   };
 
