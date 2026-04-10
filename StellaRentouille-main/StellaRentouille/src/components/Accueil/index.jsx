@@ -11,7 +11,7 @@ function Accueil() {
       
       <div className="container">
         <p className="text">« StellarRentouille est la plateforme de référence pour l'acquisition certifiée d'astres et de corps célestes. Parcourez notre catalogue galactique et devenez officiellement propriétaire d'une planète ou d'un astéroïde en quelques clics. »</p>
-        <img className="image" src={image1} alt="Univers" />
+        <img className="image" src={image} alt="Univers" />
       </div>
 
       <div className="container">
