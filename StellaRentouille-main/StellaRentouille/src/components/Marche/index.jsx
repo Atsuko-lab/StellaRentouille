@@ -29,12 +29,21 @@ const Marche = () => {
     }, []);
 
     const selectItemHandler = (type, id) => {
-        console.log(`Selected ${type} with id: ${id}`);
+        let item = null;
         switch (type) {
             case 'planet':
-                setSelectedItem(planets.find(planet => planet.id === id));
-                setModalVisible(true);
+                item = planets.find(p => p.id === id);
                 break;
+            case 'asteroid':
+                item = asteroids.find(a => a.id === id);
+                break;
+            case 'soleil':
+                item = soleils.find(s => s.id === id);
+                break;
+        }
+        if (item) {
+            setSelectedItem(item);
+            setModalVisible(true);
         }
     };
     if (planets.length=== 0) {
@@ -51,25 +60,19 @@ const Marche = () => {
             <p>Découvrez toutes nos offres</p>
             <div className="planets-grid">
                 {planets.map((planet) => (
-                    <div key={planet.id} className="planet-card">
+                    <div key={planet.id} className="planet-card" onClick={() => selectItemHandler('planet', planet.id)}>
                         <img
                             src={planet.img}
                             alt={planet.nom}
                             className="planet-image"
                         />
-                        <button onClick={() => selectItemHandler('planet', planet.id)}>Détails</button>
                         <h2 className="planet-name">{planet.nom}</h2>
                         <h3 className='planet-price'>{planet.prix}</h3>
                         <h3 className="planet-state">{planet.state}</h3>
-                        <p className="planet-info"><strong>Taille :</strong> {planet.taille_km} km</p>
-                        <p className="planet-info"><strong>Climat :</strong> {planet.climat}</p>
-                        <p className="planet-info"><strong>Atmosphère :</strong> {planet.composition_atmosphere.join(', ')}</p>
-                        <p className="planet-info"><strong>Durée de l'année :</strong> {planet.duree_annee_jours} jours</p>
-                        <p className="planet-info"><strong>Distance au Soleil :</strong> {planet.distance_soleil_millions_km} millions km</p>
                     </div>
                 ))}
                 {asteroids.map((asteroid) => (
-                    <div key={asteroid.id} className="planet-card">
+                    <div key={asteroid.id} className="planet-card" onClick={() => selectItemHandler('asteroid', asteroid.id)}>
                         <img
                             src={asteroid.img}
                             alt={asteroid.nom}
@@ -78,12 +81,10 @@ const Marche = () => {
                         <h2 className="planet-name">{asteroid.nom}</h2>
                         <h3 className='planet-price'>{asteroid.prix}</h3>
                         <h3 className="planet-state">{asteroid.state}</h3>
-                        <p className="planet-info"><strong>Taille :</strong> {asteroid.taille_diametre_km} km</p>
-                        <p className="planet-info"><strong>Vitesse :</strong> {asteroid.vitesse_km_s} km/s</p>
                     </div>
                 ))}
                 {soleils.map((soleil) => (
-                    <div key={soleil.id} className="planet-card">
+                    <div key={soleil.id} className="planet-card" onClick={() => selectItemHandler('soleil', soleil.id)}>
                         <img
                             src={soleil.img}
                             alt={soleil.nom}
@@ -92,8 +93,6 @@ const Marche = () => {
                         <h2 className="planet-name">{soleil.nom}</h2>
                         <h3 className='planet-price'>{soleil.prix}</h3>
                         <h3 className="planet-state">{soleil.state}</h3>
-                        <p className="planet-info"><strong>Taille :</strong> {soleil.taille_km} km</p>
-                        <p className="planet-info"><strong>Type :</strong> {soleil.type}</p>
                     </div>
                 ))}
             </div>
