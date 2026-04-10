@@ -88,7 +88,7 @@ StellaRentouille propose un marché intergalactique où chaque astre est mis en 
 ```bash
 # Cloner le dépôt
 git clone <url-du-repo>
-cd StellaRentouille
+cd StellaRentouille-main/StellaRentouille
 
 # Installer les dépendances
 npm install
@@ -106,12 +106,6 @@ npm install
 ```bash
 # Serveur de développement (avec HMR)
 npm run dev
-
-# Build de production
-npm run build
-
-# Prévisualiser le build
-npm run preview
 ```
 
 ---
