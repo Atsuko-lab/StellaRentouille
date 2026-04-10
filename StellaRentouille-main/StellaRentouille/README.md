@@ -6,15 +6,38 @@
 
 ## 📋 Table des matières
 
-- [Aperçu](#-aperçu)
-- [Fonctionnalités](#-fonctionnalités)
-- [Stack technique](#-stack-technique)
-- [Installation](#-installation)
-- [Lancement](#-lancement)
-- [Structure du projet](#-structure-du-projet)
-- [Pages et composants](#-pages-et-composants)
-- [Données](#-données)
-- [Scripts disponibles](#-scripts-disponibles)
+- [🌌 StellaRentouille](#-stellarentouille)
+  - [📋 Table des matières](#-table-des-matières)
+  - [🔭 Aperçu](#-aperçu)
+  - [✨ Fonctionnalités](#-fonctionnalités)
+  - [🛠 Stack technique](#-stack-technique)
+  - [📦 Installation](#-installation)
+    - [Prérequis](#prérequis)
+    - [Étapes](#étapes)
+  - [🚀 Lancement](#-lancement)
+  - [📁 Structure du projet](#-structure-du-projet)
+  - [📄 Pages et composants](#-pages-et-composants)
+    - [🏠 Accueil (`/`)](#-accueil-)
+    - [🛒 Marché (`/marche`)](#-marché-marche)
+    - [🔍 ModalInfo (popup)](#-modalinfo-popup)
+    - [📬 Contact (`/contact`)](#-contact-contact)
+    - [🧭 Header](#-header)
+  - [📊 Données](#-données)
+    - [Planètes (`planets.json`)](#planètes-planetsjson)
+    - [Astéroïdes (`asteroides.json`)](#astéroïdes-asteroidesjson)
+    - [Soleils (`soleil.json`)](#soleils-soleiljson)
+  - [📜 Scripts disponibles](#-scripts-disponibles)
+  - [🐛 Bugs à corriger](#-bugs-à-corriger)
+    - [Bug 1 — Formulaire de contact : saisie de texte](#bug-1--formulaire-de-contact--saisie-de-texte)
+    - [Bug 2 — Formulaire de contact : bouton envoyer](#bug-2--formulaire-de-contact--bouton-envoyer)
+    - [Bug 3 — Les soleils ne s'affichent pas](#bug-3--les-soleils-ne-saffichent-pas)
+    - [Bug 4 — La Terre ne doit pas être sur le site](#bug-4--la-terre-ne-doit-pas-être-sur-le-site)
+    - [Bug 5 — Mars indisponible mais toujours cliquable](#bug-5--mars-indisponible-mais-toujours-cliquable)
+    - [Bug 6 — Le dropdown de tri par type ne fonctionne pas](#bug-6--le-dropdown-de-tri-par-type-ne-fonctionne-pas)
+    - [Bug 7 — Le bouton « Louer cet astre » ne ferme pas la popup](#bug-7--le-bouton--louer-cet-astre--ne-ferme-pas-la-popup)
+    - [Bug 8 — Image manquante sur certains astéroïdes](#bug-8--image-manquante-sur-certains-astéroïdes)
+    - [Bug 9 — Clic sur un astéroïde redirige vers l'accueil](#bug-9--clic-sur-un-astéroïde-redirige-vers-laccueil)
+    - [Bug 10 — Fond coupé sur la page Accueil](#bug-10--fond-coupé-sur-la-page-accueil)
 
 ---
 
@@ -221,3 +244,87 @@ Les données sont stockées en fichiers JSON statiques dans `/public/` et récup
 | `npm run build` | Génère le build de production |
 | `npm run preview` | Prévisualise le build de production |
 | `npm run lint` | Lance ESLint sur le projet |
+
+---
+
+## 🐛 Bugs à corriger
+
+Ce projet contient **des bugs intentionnels** à des fins pédagogiques. Votre mission : les identifier dans le code et les corriger.
+
+### Bug 1 — Formulaire de contact : saisie de texte
+
+Quand je tape une phrase dans un champ texte, **l'interface re-render à la fin de chaque mot**. De plus, quand je veux effacer un caractère, **ça efface tout le champ** d'un coup.
+
+> **Page concernée :** Contact (`/contact`)
+
+---
+
+### Bug 2 — Formulaire de contact : bouton envoyer
+
+**Je ne peux pas cliquer sur le bouton « Envoyer »** du formulaire de contact.
+
+> **Page concernée :** Contact (`/contact`)
+
+---
+
+### Bug 3 — Les soleils ne s'affichent pas
+
+Les soleils (étoiles) **ne s'affichent pas du tout** sur la page Marché, alors qu'il y en a 5 dans les données.
+
+> **Page concernée :** Marché (`/marche`)
+
+---
+
+### Bug 4 — La Terre ne doit pas être sur le site
+
+La planète **Terre ne doit pas apparaître** dans le catalogue du marché. Il faut la filtrer.
+
+> **Page concernée :** Marché (`/marche`)
+
+---
+
+### Bug 5 — Mars indisponible mais toujours cliquable
+
+Mars est marquée comme **Indisponible**, elle ne doit donc **pas être cliquable** (pas de popup au clic). En revanche, sa carte doit toujours rester visible sur le marché.
+
+> **Page concernée :** Marché (`/marche`)
+
+---
+
+### Bug 6 — Le dropdown de tri par type ne fonctionne pas
+
+Il y a un **dropdown pour trier/filter les articles par type** (planètes, astéroïdes, soleils), mais il **ne fonctionne pas** : la sélection ne change rien à l'affichage.
+
+> **Page concernée :** Marché (`/marche`)
+
+---
+
+### Bug 7 — Le bouton « Louer cet astre » ne ferme pas la popup
+
+Quand je clique sur le bouton **« Louer cet astre »** dans la popup de détails, **la popup doit se fermer** mais elle reste ouverte.
+
+> **Composant concerné :** ModalInfo
+
+---
+
+### Bug 8 — Image manquante sur certains astéroïdes
+
+Sur **certains astéroïdes**, l'image ne s'affiche pas (image cassée ou chemin incorrect).
+
+> **Page concernée :** Marché (`/marche`)
+
+---
+
+### Bug 9 — Clic sur un astéroïde redirige vers l'accueil
+
+Quand je clique sur la carte d'un **astéroïde**, au lieu d'ouvrir la popup de détails, je suis **redirigé vers la page d'accueil**.
+
+> **Page concernée :** Marché (`/marche`)
+
+---
+
+### Bug 10 — Fond coupé sur la page Accueil
+
+Sur la page d'accueil, **le fond apparaît comme coupé** (il ne couvre pas toute la page ou se termine brusquement).
+
+> **Page concernée :** Accueil (`/`)
